@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{24E4C737-3569-4BD2-BB91-4B1F2212F6F5}</ProjectGuid>
+    <ProjectGuid>{5F6A3294-FD45-42DB-8889-00D13467D556}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>regex</RootNamespace>
+    <RootNamespace>lambda</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,7 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="regex-sample.cpp" />
+    <ClCompile Include="lambda-sample.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
