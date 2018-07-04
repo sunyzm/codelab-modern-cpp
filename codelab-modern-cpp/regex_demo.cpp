@@ -1,17 +1,14 @@
-#include <cstdlib>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <regex>
-
-using namespace std;
 
 void regexMatchFilenames() {
     // Simple regular expression matching
     std::string fnames[] = { "foo.txt", "bar.txt", "baz.dat", "zoidberg" };
     std::regex txt_regex("[a-z]+\\.txt");
 
-    for (const auto &fname : fnames) {
+    for (const std::string& fname : fnames) {
         std::cout << fname << ": " << std::regex_match(fname, txt_regex) << '\n';
     }
 
@@ -48,7 +45,7 @@ void regexMatchFilenames() {
 }
 
 void regexParseObj() {
-    vector<string> candidates{
+    std::vector<std::string> candidates{
         "f 5449//5449 5279//5279 5450//5450",
         "f 5450//5450 5279//5279 5278//5278",
         "f 5451//5451 5280//5280 5452//5452",
@@ -61,10 +58,10 @@ void regexParseObj() {
     std::smatch base_match, multi_match;
     for (const auto& line : candidates) {
         if (regex_match(line, base_match, simple_face_regex)) {
-            cout << base_match[1].str() << " " << base_match[2].str() << " " << base_match[3].str() << endl;
+            std::cout << base_match[1].str() << " " << base_match[2].str() << " " << base_match[3].str() << std::endl;
         }
         else if (regex_match(line, multi_match, multi_face_regex)) {
-            cout << multi_match[1].str() << " " << multi_match[2].str() << " " << multi_match[3].str() << endl;
+            std::cout << multi_match[1].str() << " " << multi_match[2].str() << " " << multi_match[3].str() << std::endl;
         }
     }
 }
@@ -74,5 +71,5 @@ int main()
     regexMatchFilenames();
     regexParseObj();
 
-    system("PAUSE");
+    return 0;
 }
